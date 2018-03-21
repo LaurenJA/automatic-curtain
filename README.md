@@ -11,6 +11,8 @@ Thus allowing users to:
 
 This real-time project utilises a Raspberry Pi 3, light and proximity sensors, a motorised pulley system, custom PCB boards, and a web GUI. 
 
+More details about the hardware and software can be found in the [Wiki](https://github.com/LaurenJA/automatic-curtain/wiki.
+
 ### System Overview 
 
 Below is an simple overview of how the deployed sensors and motor could be positioned on the curtain pole. 
