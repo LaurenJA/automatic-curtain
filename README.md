@@ -16,3 +16,33 @@ This real-time project utilises a Raspberry Pi 3, light and proximity sensors, a
 Below is an simple overview of how the deployed sensors and motor could be positioned on the curtain pole. 
 
 ![alt tag](system-overview.png)
+
+### Build Instructions 
+
+The code related to this project can be found in the software folder.
+
+#### Requirements 
+CMake version 3.10 
+
+#### Build 
+create build folder 
+```
+mkdir build 
+cd build 
+```
+
+Build project using CMake. Be sure to check the output for any errors 
+```
+cmake .. 
+```
+
+Compile the project 
+``` 
+make
+```
+
+To run the program
+``` 
+./main 
+```
+
