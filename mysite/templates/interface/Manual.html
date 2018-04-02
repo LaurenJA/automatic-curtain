@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/manual.css"/>
+    <title>Manual</title>
+</head>
+<body>
+    <div id="header">
+        Smart Curtain
+    </div>
+    <div id="SCinterface">
+        <p>This is Manual Mode</p>
+        {% if account == 0 %}
+        <table>
+            <tr>
+                <td>
+                    <div id="i">
+                        <img src="{% static "images/open.png"%}"/>
+                    </div>
+                </td>
+                <td>
+                    <div id="i"><img src="{% static "images/close.png" %}"/></div>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'open' %}">open the curtain</a></td>
+                <td><a href="{% url 'close' %}">close the curtain</a></td>
+            </tr>
+        </table>
+        {% endif %}
+        {% if account == 1 %}
+        <table>
+            <tr><td>The curtain is open</td></tr>
+            <tr><td><div id="i"><img src="{% static "images/open.png"%}"/></div> </td></tr>
+            <tr><td><a href="{% url 'close' %}">close the curtain</a></td></tr>
+        </table>
+        {% endif %}
+        {% if account == 2 %}
+        <table>
+            <tr><td>The curtain is closed</td></tr>
+            <tr><td><div id="i"><img src="{% static "images/close.png" %}"/></div> </td></tr>
+            <tr><td><a href="{% url 'open' %}">open the curtain</a></td></tr>
+        </table>
+        {% endif %}
+        <p>
+            <a href="{% url 'auto' %}">Change to Auto mode</a>
+        </p>
+    </div>
+
+</body>
+</html>

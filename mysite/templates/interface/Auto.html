@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/stylesheet.css"/>
+    <title>Auto</title>
+</head>
+<body>
+    <div id="header">
+        Smart Curtain
+    </div>
+    <div >
+        <table>
+        <tr><td style="font-size: x-large">This is Automatic Mode</td></tr>
+        <tr><td><img src="{% static "images/auto.png" %}"/></td></tr>
+        <tr><td><p>
+        <a href="{% url 'manual' %}">Change to Manual Mode</a>
+        </p></td></tr>
+        </table>
+    </div>
+</body>
+</html>

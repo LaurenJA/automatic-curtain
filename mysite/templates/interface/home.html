@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/stylesheet.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <div id="header">
+        Smart Curtain
+    </div>
+    {% if count == 0 %}
+    <div id ="basic">
+        <table >
+            <tr id="image">
+                <td><img src="{% static "images/auto.png" %}"/></td>
+                <td><img src="{% static "images/manual.png" %}"/></td>
+            </tr>
+            <tr>
+                <td><a href="{% url 'auto' %}">Auto</a></td>
+                <td><a href="{% url 'manual' %}">Manual</a></td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+</body>
+</html>
