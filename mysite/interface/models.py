@@ -1,5 +1,5 @@
 from django.db import models
-
+from django import forms
 
 # Create your models here.
 
@@ -11,9 +11,18 @@ class Type(models.Model):
         return self.name
 
 
-class Status(models.Model):
-    title = models.CharField(max_length=128)
-    condition = 0
+class SetOpentime(models.Model):
+    name = models.CharField(max_length=128, unique=True)
+    mode = models.CharField(max_length=128, unique=True)
+    x = 0
 
     def __str__(self):
-        return self.title
+        return self.name
+
+class SetClosetime(models.Model):
+    name = models.CharField(max_length=128, unique=True)
+    mode = models.CharField(max_length=128, unique=True)
+    x = 0
+
+    def __str__(self):
+        return self.name

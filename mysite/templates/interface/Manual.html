@@ -13,38 +13,72 @@
     </div>
     <div id="SCinterface">
         <p>This is Manual Mode</p>
-        {% if account == 0 %}
         <table>
             <tr>
                 <td>
                     <div id="i">
-                        <img src="{% static "images/open.png"%}"/>
+                        <a href="{% url 'open' %}">
+                            <img src="{% static "images/open.png"%}"/>
+                        </a>
                     </div>
                 </td>
                 <td>
-                    <div id="i"><img src="{% static "images/close.png" %}"/></div>
+                    <div id="i">
+                        <a href="{% url 'close' %}">
+                            <img src="{% static "images/close.png" %}"/>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div id="i">
+                        <a href="{% url 'stop' %}">
+                            <img src="{% static "images/stop.jpeg"%}"/>
+                        </a>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td><a href="{% url 'open' %}">open the curtain</a></td>
                 <td><a href="{% url 'close' %}">close the curtain</a></td>
+                <td><a href="{% url 'stop' %}">stop the curtain</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/interface/Opentimer" method="get">
+                        open time
+                        <input type="time" name="opentime">
+                        <input type="submit" value="Set" />
+                    </form>
+                </td>
+                <td>
+                    <form action="/interface/Closetimer" method="get">
+                        close time
+                        <input type="time" name="closetime">
+                        <input type="submit" value="Set" />
+                    </form>
+                </td>
+                <td>
+                    <form action="/interface/Deltimer" method="get">
+                        delete the timeset
+                        <input type="submit" value="Deltimer" style="height: 100px; width: 200px; fontsize:40"/>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    {% if open == 1 %}
+                    The open time is {{ opencontent }}
+                    {% endif %}
+                </td>
+
+                <td>
+                    {% if close == 1 %}
+                    The close time is {{ closecontent }}
+                    {% endif %}
+                </td>
             </tr>
         </table>
-        {% endif %}
-        {% if account == 1 %}
-        <table>
-            <tr><td>The curtain is open</td></tr>
-            <tr><td><div id="i"><img src="{% static "images/open.png"%}"/></div> </td></tr>
-            <tr><td><a href="{% url 'close' %}">close the curtain</a></td></tr>
-        </table>
-        {% endif %}
-        {% if account == 2 %}
-        <table>
-            <tr><td>The curtain is closed</td></tr>
-            <tr><td><div id="i"><img src="{% static "images/close.png" %}"/></div> </td></tr>
-            <tr><td><a href="{% url 'open' %}">open the curtain</a></td></tr>
-        </table>
-        {% endif %}
         <p>
             <a href="{% url 'auto' %}">Change to Auto mode</a>
         </p>

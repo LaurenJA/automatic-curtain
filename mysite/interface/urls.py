@@ -8,4 +8,8 @@ urlpatterns = [
     url(r'^Manual/', views.Manual, name='manual'),
     url(r'^Open/',views.open, name='open'),
     url(r'^Close/',views.close, name='close'),
+    url(r'^Stop/',views.stop, name='stop'),
+    url(r'^Opentimer/',views.opentimer, name='opentimer'),
+    url(r'^Closetimer/',views.closetimer, name='closetimer'),
+    url(r'^Deltimer/',views.deltimer, name='deltimer'),
 ]
