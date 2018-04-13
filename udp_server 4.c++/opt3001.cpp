@@ -16,7 +16,7 @@ opt3001::~opt3001()
 
 void opt3001::init(void)
 {
-	fd = wiringPiI2CSetup(0x45);
+	fd = wiringPiI2CSetup(0x44);
         wiringPiI2CWriteReg16(fd, CONF_REG, 0x10C5);
 }
 
