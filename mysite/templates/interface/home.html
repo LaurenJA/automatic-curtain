@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The style of the web page is set by the css files below -->
     <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
     <link type="text/css" rel="stylesheet" href="/static/css/stylesheet.css"/>
     <title>Home</title>
@@ -11,19 +12,19 @@
     <div id="header">
         Smart Curtain
     </div>
-    {% if count == 0 %}
     <div id ="basic">
         <table >
             <tr id="image">
-                <td><img src="{% static "images/auto.png" %}"/></td>
-                <td><img src="{% static "images/manual.png" %}"/></td>
+                <!-- This is a picture, it is also a link to Auto mode -->
+                <td><a href="{% url 'auto' %}"><img src="{% static "images/auto.png" %}"/></a></td>
+                <!-- This is a picture, it is also a link to Manual mode -->
+                <td><a href="{% url 'manual' %}"><img src="{% static "images/manual.png" %}"/></a></td>
             </tr>
             <tr>
-                <td><a href="{% url 'auto' %}">Auto</a></td>
-                <td><a href="{% url 'manual' %}">Manual</a></td>
+                <td><a href="{% url 'auto' %}">Auto</a></td>    <!-- The link to Auto mode -->
+                <td><a href="{% url 'manual' %}">Manual</a></td><!-- The link to Manual mode -->
             </tr>
         </table>
     </div>
-    {% endif %}
 </body>
 </html>

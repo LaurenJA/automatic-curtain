@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The style of the web page is set by the css files below -->
     <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
     <link type="text/css" rel="stylesheet" href="/static/css/stylesheet.css"/>
     <title>Auto</title>
@@ -14,9 +15,11 @@
     <div >
         <table>
         <tr><td style="font-size: x-large">This is Automatic Mode</td></tr>
-        <tr><td><img src="{% static "images/auto.png" %}"/></td></tr>
+            <tr><td><a href="{% url 'manual' %}"><!-- The picture is a link to Manual mode as well, so it can be type -->
+                <img src="{% static "images/auto.png" %}"/><!-- The picture shows the what the currently mode is -->
+            </a></td></tr>
         <tr><td><p>
-        <a href="{% url 'manual' %}">Change to Manual Mode</a>
+        <a href="{% url 'manual' %}">Change to Manual Mode</a>       <!-- The link to Manual mode -->
         </p></td></tr>
         </table>
     </div>

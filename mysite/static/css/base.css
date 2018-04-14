@@ -1,6 +1,8 @@
+/* The basic setting*/
 body{
     background-color: cornsilk;
 }
+/* The setting of the header*/
 #header {
 	position: relative;
 	top: -10px;

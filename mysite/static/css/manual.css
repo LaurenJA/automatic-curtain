@@ -1,5 +1,5 @@
 
-
+/* The setting of the table*/
 table {
     position: relative;
 	border: #000000 1px solid;
@@ -11,13 +11,14 @@ table {
 	border-bottom-left-radius: 15px;
 }
 
+/* The setting of the table*/
 td {
 	height: 75px;
 	width: 400px;
 	box-shadow: none;
 }
 
-
+/* The setting of the table row*/
 tr {
     text-align: center;
     position: relative;
@@ -28,16 +29,20 @@ tr {
 	padding: 5px;
 	border-radius: 5px 5px;
 }
+
+/* The setting of the graphs*/
 #i{
     width: 400px;
     height: 225px;
     border: 1px solid #000;
 }
 
+/* The setting of the image*/
 img {
     max-width: 100%;
     max-height: 100%;
 }
+/* The setting of the paragraph*/
 p{
     position: relative;
     margin-top: auto;

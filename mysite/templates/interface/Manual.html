@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The style of the web page is set by the css files below -->
     <link type="text/css" rel="stylesheet" href="/static/css/base.css"/>
     <link type="text/css" rel="stylesheet" href="/static/css/manual.css"/>
     <title>Manual</title>
@@ -16,45 +17,45 @@
         <table>
             <tr>
                 <td>
-                    <div id="i">
+                    <div id="i"><!-- This mark is used to set the picture in the css file-->
                         <a href="{% url 'open' %}">
-                            <img src="{% static "images/open.png"%}"/>
+                            <img src="{% static "images/open.png"%}"/><!-- This is a picture, it is also a link -->
                         </a>
                     </div>
                 </td>
                 <td>
                     <div id="i">
                         <a href="{% url 'close' %}">
-                            <img src="{% static "images/close.png" %}"/>
+                            <img src="{% static "images/close.png" %}"/><!-- This is a picture, it is also a link -->
                         </a>
                     </div>
                 </td>
                 <td>
                     <div id="i">
                         <a href="{% url 'stop' %}">
-                            <img src="{% static "images/stop.jpeg"%}"/>
+                            <img src="{% static "images/stop.jpeg"%}"/><!-- This is a picture, it is also a link -->
                         </a>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td><a href="{% url 'open' %}">open the curtain</a></td>
-                <td><a href="{% url 'close' %}">close the curtain</a></td>
-                <td><a href="{% url 'stop' %}">stop the curtain</a></td>
+                <td><a href="{% url 'open' %}">open the curtain</a></td>    <!-- The link to open -->
+                <td><a href="{% url 'close' %}">close the curtain</a></td>  <!-- The link to close -->
+                <td><a href="{% url 'stop' %}">stop the curtain</a></td>    <!-- The link to stop -->
             </tr>
             <tr>
                 <td>
-                    <form action="/interface/Opentimer" method="get">
+                    <form action="/interface/Opentimer" method="get"><!-- Use the function opentimer -->
                         open time
-                        <input type="time" name="opentime">
-                        <input type="submit" value="Set" />
+                        <input type="time" name="opentime"><!-- Input the time  -->
+                        <input type="submit" value="Set" /><!-- submit button  -->
                     </form>
                 </td>
                 <td>
-                    <form action="/interface/Closetimer" method="get">
+                    <form action="/interface/Closetimer" method="get"><!-- Use the function closetimer -->
                         close time
-                        <input type="time" name="closetime">
-                        <input type="submit" value="Set" />
+                        <input type="time" name="closetime"><!-- Input the time  -->
+                        <input type="submit" value="Set" /><!-- submit button  -->
                     </form>
                 </td>
                 <td>
@@ -67,20 +68,20 @@
 
             <tr>
                 <td>
-                    {% if open == 1 %}
+                    {% if open == 1 %}      <!-- If the variable open is 1, then the message below will be shown -->
                     The open time is {{ opencontent }}
                     {% endif %}
                 </td>
 
                 <td>
-                    {% if close == 1 %}
+                    {% if close == 1 %}     <!-- If the variable close is 1, then the message below will be shown -->
                     The close time is {{ closecontent }}
                     {% endif %}
                 </td>
             </tr>
         </table>
         <p>
-            <a href="{% url 'auto' %}">Change to Auto mode</a>
+            <a href="{% url 'auto' %}">Change to Auto mode</a> <!-- The link to Auto mode -->
         </p>
     </div>
 
