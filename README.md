@@ -17,7 +17,7 @@ More details about the hardware and software can be found in the [Wiki](https://
 
 Below is an simple overview of how the deployed sensors and motor could be positioned on the curtain pole. 
 
-![alt tag](system-overview.png)
+![alt tag](image/system-overview.png)
 
 ### Build Instructions 
 
