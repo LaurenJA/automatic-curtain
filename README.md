@@ -52,7 +52,7 @@ To run the program
 ./main 
 ```
 
-To open the folder of the web app(which is named as mysite).
+To open the folder of the web app(which is named as mysite in this project).
 ```
 cd ...
 ```
