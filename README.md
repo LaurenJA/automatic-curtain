@@ -26,9 +26,9 @@ The code related to this project can be found in the software folder.
 #### Requirements 
 CMake version 3.10 
 
-Python 3.6
+Python version 3.6
 
-Django 2.11.1
+Django version 2.11.1
 
 #### Build 
 create build folder 
