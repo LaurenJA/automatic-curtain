@@ -161,17 +161,33 @@ bool global::deal(int len)
 
 	socklen_t sock_len = sizeof(addr);
 	sendto(fd_udp, buf, strlen(buf), 0, (struct sockaddr*)&addr, sock_len);
+	printf("Send %d bytes: %s\n", (int)strlen(buf), buf);
 	return true;
 }
 
 int global::recv(void)
 {
-	int ret;
+	int i, ret;
 
 	addr_len = sizeof(addr);
 	memset(&addr,0,addr_len);
 	ret = recvfrom(fd_udp, buf, 64, 0, (struct sockaddr*)&addr, &addr_len);
-
+	if(ret >= 0) {
+		printf("Recieve %d bytes:", ret);
+		for(i=0;i<ret;i++) {
+			unsigned char c;
+			c = buf[i];
+			if(c>=(unsigned char)32&&c<=(unsigned char)126)
+				printf("%c", c);
+			else
+				printf(".");
+		}
+		printf("\nFor hex:");
+		for(i=0;i<ret;i++)
+			printf(" %02hhx", buf[i]);
+		printf("\n");
+	}
+	
 	return ret;
 }
 
