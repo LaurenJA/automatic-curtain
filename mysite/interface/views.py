@@ -118,10 +118,10 @@ def check():
     return context_dict
 
 def send(data):
-    address = ('192.168.1.16',10000)
+    address = ('192.168.1.183',10000)
     addr = ('127.0.0.1',10000)
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    #s.sendto(bytes(data,'utf-8'),address)
-    s.sendto(bytes(data,'utf-8'),addr)
+    s.sendto(bytes(data,'utf-8'),address)
+    #s.sendto(bytes(data,'utf-8'),addr)
     s.close()
     #print("sent close")
