@@ -29,7 +29,7 @@ float opt3001::read_lux(void)
 	right = right >> 8;
 	readres = (left|right);
 
-	unsigned exponential = (readres>>12)&0xF000;
+	unsigned exponential = (readres>>12)&0xF;
 	float LSB_Size=pow(2, exponential)*0.01;
 	int R = readres&0xFFF;
 	return R*LSB_Size;
