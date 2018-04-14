@@ -26,6 +26,10 @@ The code related to this project can be found in the software folder.
 #### Requirements 
 CMake version 3.10 
 
+Python 3.6
+
+Django 2.11.1
+
 #### Build 
 create build folder 
 ```
@@ -47,4 +51,15 @@ To run the program
 ``` 
 ./main 
 ```
+
+To open the folder of the web app(which is named as mysite).
+```
+cd ...
+```
+
+Then run the server.
+```
+python manage.py runserver
+```
+
 
