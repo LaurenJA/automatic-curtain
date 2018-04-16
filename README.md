@@ -21,7 +21,7 @@ Below is an simple overview of how the deployed sensors and motor could be posit
 
 ### Build Instructions 
 
-The code related to this project can be found in the software folder.
+The code related to this project can be found in the code folder.
 
 #### Requirements 
 CMake version 3.10 
@@ -31,17 +31,6 @@ Python version 3.6
 Django version 2.11.1
 
 #### Build 
-create build folder 
-```
-mkdir build 
-cd build 
-```
-
-Build project using CMake. Be sure to check the output for any errors 
-```
-cmake .. 
-```
-
 Compile the project 
 ``` 
 make
@@ -49,7 +38,7 @@ make
 
 To run the program
 ``` 
-./main 
+sudo ./server 
 ```
 
 To open the folder of the web app(which is named as mysite in this project).
@@ -59,7 +48,7 @@ cd ...
 
 Then run the server.
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 ### Project Evaluation
@@ -67,9 +56,9 @@ python manage.py runserver
 #### Sampling rate
 Under the Auto model, the status will be checked every 0.2 seconds, so the sampling rate should be 5 times per seconds.
 #### Bus Protocol
-The interface of the light sensor:OPT3001 and proximity sensor:APDS9960 are IIC, so use the IIC bus protocol.
+The interface of the light sensor:OPT3001 and proximity sensor:APDS9960 are I2C, so use the I2C bus protocol.
 #### Low level implementation: kernel or user space and why?
-User space. Because the main application runs in user space and operation the hardware.
+User space. As this can provided fast enough sampling and processing, without having to modeify the kernel. 
 #### Data flow from hardware to GUI to output with data formats, latencies,processing and conversions.
 Not provided
 #### Buffering of data: how many samples?
@@ -80,9 +69,10 @@ For the large amount of data, the buffering of data should be higher, however,fo
 There are two threads, one is for communication with GUI, and one if to achieve function of the command.
 #### Structure of the software in classes, associated unit tests to turn it into reliable software
 The required software is provided within the code folder. This can be compiled and executed on the Raspberry pi by using the following command: make ./server within the code directory. And the test code also can be found in the test folder.
+Overview of the software can be found in the wiki
 #### Team structure: which roles in a team of 3 and how equal contributions are guaranteed?
 The team members and roles are as follow:
-Lauren Astell:
+Lauren Astell: Hardware (including PCB Design)
 Jing Wang: Code of light sensor,proximity sensor,motor controller and main function implementaion and test.
 Jianan Kan:GUI Implementation
 #### How much time is allocated to hard, software and debugging and how is this interleaved?
