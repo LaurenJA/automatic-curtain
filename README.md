@@ -78,9 +78,10 @@ Jianan Kan:GUI Implementation
 #### How much time is allocated to hard, software and debugging and how is this interleaved?
 Every memeber will do their specific work, and control the process by themselves. The final work achieved by Lauren.
 #### Which version control software is used? How are releases / milestones done and numbered?
-
+GIT was used. Versions are number vX.Y, where X is a major change and Y is a minor. 
+The project is currently at realease v1.0
 #### What is the release strategy / publication / publicity? How is that measured and deemed to be successful?
-
+To release the project, a release was created on the GitHub so any user that wishes to create this project themselves can download it. 
 ####  Measurement of success of the application in the context of the problem given and evaluation of it.
 
 #### How to implement the GUI? Permitted refresh rate and latency resulted from it.
