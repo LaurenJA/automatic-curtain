@@ -92,3 +92,6 @@ Every memeber will do their specific work, and control the process by themselves
 #### What is the release strategy / publication / publicity? How is that measured and deemed to be successful?
 
 ####  Measurement of success of the application in the context of the problem given and evaluation of it.
+
+#### How to implement the GUI? Permitted refresh rate and latency resulted from it.
+To use the web page as the GUI, the web page is coded in django. Everyone who get the website can control the curtain in the same network.
