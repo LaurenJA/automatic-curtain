@@ -62,4 +62,33 @@ Then run the server.
 python manage.py runserver
 ```
 
+### Project Evaluation
 
+#### Sampling rate
+Under the Auto model, the status will be checked every 0.2 seconds, so the sampling rate should be 5 times per seconds.
+#### Bus Protocol
+The interface of the light sensor:OPT3001 and proximity sensor:APDS9960 are IIC, so use the IIC bus protocol.
+#### Low level implementation: kernel or user space and why?
+User space. Because the main application runs in user space and operation the hardware.
+#### Data flow from hardware to GUI to output with data formats, latencies,processing and conversions.
+Not provided
+#### Buffering of data: how many samples?
+The buffering of data is 8k, which is enough for this project.
+#### How does the buffering impact on the realtime performance and how much latency is introduced?
+For the large amount of data, the buffering of data should be higher, however,for our project, the ultra-small amout of date has no influence on realtime performance.
+#### How many threads are needed and/or how can the load be distributed to allow a responsive application?
+There are two threads, one is for communication with GUI, and one if to achieve function of the command.
+#### Structure of the software in classes, associated unit tests to turn it into reliable software
+The required software is provided within the code folder. This can be compiled and executed on the Raspberry pi by using the following command: make ./server within the code directory. And the test code also can be found in the test folder.
+#### Team structure: which roles in a team of 3 and how equal contributions are guaranteed?
+The team members and roles are as follow:
+Lauren Astell:
+Jing Wang: Code of light sensor,proximity sensor,motor controller and main function implementaion and test.
+Jianan Kan:GUI Implementation
+#### How much time is allocated to hard, software and debugging and how is this interleaved?
+Every memeber will do their specific work, and control the process by themselves. The final work achieved by Lauren.
+#### Which version control software is used? How are releases / milestones done and numbered?
+
+#### What is the release strategy / publication / publicity? How is that measured and deemed to be successful?
+
+####  Measurement of success of the application in the context of the problem given and evaluation of it.
