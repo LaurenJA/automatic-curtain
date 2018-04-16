@@ -1,0 +1,94 @@
+# Created by Ultra Librarian Gold 8.2.165 Copyright © 1999-2017
+# Frank Frank, Accelerated Designs
+
+Grid mil;
+Set Wire_Bend 2;
+
+
+Edit 'DNP0006A.pac';
+Layer 1;
+Smd '1' 19.685 9.8425 -100 R0 (-37.4016 25.5906);
+Layer 1;
+Smd '2' 19.685 9.8425 -100 R0 (-37.4016 0);
+Layer 1;
+Smd '3' 19.685 9.8425 -100 R0 (-37.4016 -25.7874);
+Layer 1;
+Smd '4' 19.685 9.8425 -100 R0 (37.4016 -25.5906);
+Layer 1;
+Smd '5' 19.685 9.8425 -100 R0 (37.4016 0);
+Layer 1;
+Smd '6' 19.685 9.8425 -100 R0 (37.4016 25.5906);
+Layer 1;
+Smd '7' 25.5906 53.1496 -0 R0 NOCREAM (0 0);
+Layer 1;
+Smd 'V' 19.685 19.685 -100 R0 (0 0);
+Layer 21;
+Wire 7 (-44 -45) (-36 -45);
+Wire 7 (36 -45) (44 -45);
+Wire 7 (36 45) (44 45);
+Wire 7 (-44 45) (-5 45);
+Change Size 50;
+Change Ratio 6;
+Text 'Designator256' SR0 (-39 74);
+Layer 51;
+Wire 6 (-41 41) (41 41);
+Wire 6 (41 -41) (41 41);
+Wire 6 (-41 -41) (41 -41);
+Wire 6 (-41 -41) (-41 41);
+Wire 4 (-14 25) -180 (-30 25);
+Wire 4 (-30 25) -180 (-14 25);
+Change Size 50;
+Change Ratio 6;
+Text '.Designator' SR360 (-29 -33);
+Layer 31;
+Layer 31;
+Change Spacing 50;
+Change Pour solid;
+Polygon 1  (12.2047 -24.6063) (12.2047 24.6063) (-12.2047 24.6063) (-12.2047 -24.6063) (12.2047 -24.6063);
+Layer 25;
+Change Size 50;
+Change Ratio 6;
+Text '>Name' SR0 (-129 -25);
+Layer 27;
+
+Edit 'OPT3001DNP.sym';
+Layer 94;
+Pin 'VDD' Pwr None Middle R0 Both 0 (-700 300)
+Pin 'ADDR' In None Middle R180 Both 0 (700 0)
+Pin 'GND' Pwr None Middle R180 Both 0 (700 -300)
+Pin 'SCL' In None Middle R180 Both 0 (700 300)
+Pin 'INT' Out None Middle R180 Both 0 (700 100)
+Pin 'SDA' In None Middle R180 Both 0 (700 200)
+Pin 'PAD' Pas None Middle R180 Both 0 (700 -400)
+Wire 6 (-500 -500) (500 -500);
+Wire 6 (500 -500) (500 500);
+Wire 6 (500 500) (-500 500);
+Wire 6 (-500 500) (-500 -500);
+Layer 97;
+Layer 95;
+Change Size 82;
+Change Ratio 6;
+Text '>Name' SR0 (-186 59);
+Layer 96;
+Change Size 82;
+Change Ratio 6;
+Text '>Value' SR0 (-211 -41);
+Layer 96;
+Change Size 82;
+Change Ratio 6;
+Text '>Value' SR0 (-211 -41);
+
+Edit 'OPT3001DNPR.dev';
+Prefix 'U';
+Description '';
+Value Off;
+Add OPT3001DNP 'A' Next  0 (0 0);
+Package 'DNP0006A';
+Technology '';
+Connect 'A.VDD' '1';
+Connect 'A.ADDR' '2';
+Connect 'A.GND' '3';
+Connect 'A.SCL' '4';
+Connect 'A.INT' '5';
+Connect 'A.SDA' '6';
+Connect 'A.PAD' '7';
